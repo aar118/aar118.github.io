@@ -1,0 +1,600 @@
+{
+  "name": "Potato",
+  "children": [
+    {
+      "name": "CS",
+      "children": [
+        {
+          "name": "CS1180",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/cs-1180"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "MTH1280"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CS1181",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/cs-1181"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "MTH1280"
+                },
+                {
+                  "name": "CS1180/CS1161"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CS2200",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/cs-2200"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "CS1200"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CS1000",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/cs-1000"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites"
+            }
+          ]
+        },
+        {
+          "name": "CS3100",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/cs-3100"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "CS1181"
+                },
+                {
+                  "name": "CEG3310"
+                },
+                {
+                  "name": "CEG2350"
+                },
+                {
+                  "name": "CS2200/MTH2570"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CS2210",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/cs-2210"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "CS3100"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CS3200",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/cs-3200"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "CS3100"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CS3180",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/cs-3180"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "CS3100"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CEG",
+      "children": [
+        {
+          "name": "CEG3310",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/ceg-3310"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "CS1181"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CEG2350",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/ceg-2350"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "CS1180/CS1160/CEG2170"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CEG4350",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/ceg-4350"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "CS3100"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CEG4110",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/ceg-4110"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "CS3100"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CEG4980",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/ceg-4980"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "CS3100"
+                },
+                {
+                  "name": "EGR3350/ENG2140"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CEG4981",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/ceg-4981"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "CEG4980"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Math",
+      "children": [
+        {
+          "name": "MTH2300",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/mth-2300"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "MTH1340"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MTH2310",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/mth-2310"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "MTH2300"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MTH2530",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/mth-2530"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "MTH2300"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MTH2570",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/mth-2570"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "MTH1280"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "STT3600",
+          "children" : [
+            {
+              "name": "Description",
+              "link": "https://www.wright.edu/degrees-and-programs/catalog/courses/stt-3600"
+            },
+            {
+              "name": "Guides",
+              "children": [
+                {
+                  "name": "Aaron's Guide",
+                  "link": "//"
+                },
+                {
+                  "name": "Other Guide",
+                  "link": "//"
+                }
+              ]
+            },
+            {
+              "name": "Prerequisites",
+              "children": [
+                {
+                  "name": "MTH2300"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

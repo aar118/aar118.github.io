@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>HTML5 Canvas</title>
+        <style>
+            canvas {
+                border:1px solid #d3d3d3;
+                background-color: #f1f1f1;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                /* bring your own prefixes */
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+<body onload="startGame()">
+
+    <script>
+        var myGamePiece;
+        var dragok = false;
+
+        function startGame() {
+            myGamePiece = new component(30, 30, "red", 80, 75);
+            myGameArea.start();
+        }
+
+        var myGameArea = {
+            canvas : document.createElement("canvas"),
+            start : function() {
+                this.canvas.width = 480;
+                this.canvas.height = 270;
+                this.context = this.canvas.getContext("2d");
+                document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+                this.interval = setInterval(updateGameArea, 5); 
+            },
+            stop : function() {
+                clearInterval(this.interval);
+            },    
+            clear : function() {
+                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            }
+        }
+
+        function component(width, height, color, x, y, type) {
+            this.type = type;
+            this.width = width;
+            this.height = height;
+            this.x = x;
+            this.y = y;  
+            this.gravity = 0.05;
+            this.velocityX = 0;
+            this.velocityY = 0;
+            this.accelerationX = 0;
+            this.accelerationY = 0;
+            this.mass = 10;
+            this.update = function() {
+                ctx = myGameArea.context;
+                ctx.fillStyle = color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+            this.newPos = function() {
+                this.accelerationY += this.gravity;
+                this.x += this.accelerationX;
+                this.y += this.accelerationY;
+                this.boundaries();
+                //Math.sqrt(Math.pow(this.accelerationX, 2) + Math.pow(this.accelerationY, 2))
+            }
+
+            this.boundaries = function() {
+                var bottom = myGameArea.canvas.height - this.height;
+                var top = 0;
+                var left = 0;
+                var right = myGameArea.canvas.width - this.width;
+                if (this.y > bottom) {
+                    this.y = bottom;
+                    this.accelerationY = -1 * (this.mass *= 0.8);
+                }
+                
+                if (this.y < top) {
+                    this.y = top;
+                    this.accelerationY = this.accelerationY * -1;
+                }
+                if (this.x < left) {
+                    this.x = left;
+                }
+                if (this.x > right) {
+                    this.x = right;
+                }
+            }
+        }
+
+        function myMove(e) {
+                if (dragok) {
+                    myGamePiece.gravity = 0;
+                    myGamePiece.accelerationX = 0;
+                    myGamePiece.accelerationY = 0;
+                    myGamePiece.x = e.clientX - myGameArea.canvas.getBoundingClientRect().left - myGamePiece.width / 2;
+                    myGamePiece.y = e.clientY - myGameArea.canvas.getBoundingClientRect().top - myGamePiece.height / 2;
+                }
+            }
+
+            function myDown(e) {
+                var clickX = e.clientX - myGameArea.canvas.getBoundingClientRect().left;
+                var clickY = e.clientY - myGameArea.canvas.getBoundingClientRect().top;
+                var x = myGamePiece.x;
+                var y = myGamePiece.y;
+                if (x + myGamePiece.width > clickX && x < clickX && y + myGamePiece.height > clickY &&
+                    y < clickY) {
+                    dragok = true;
+                    myGameArea.canvas.onmousemove = myMove;
+                    myGamePiece.mass = 10;
+                }
+            }
+
+            function myUp(e) {
+                myGamePiece.gravity = 0.05;
+                dragok = false;
+                myGameArea.canvas.onmousemove = null;
+            }
+
+            myGameArea.canvas.onmousedown = myDown;
+            myGameArea.canvas.onmouseup = myUp;
+
+        function updateGameArea() {
+            myGameArea.clear();
+            myGamePiece.newPos();
+            myGamePiece.update();
+        }
+    </script>
+</body>
+
+</html>

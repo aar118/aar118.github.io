@@ -1,0 +1,14 @@
+h3 {
+	text-align: center;
+}
+
+.calculate-container {
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 15px;
+}
+.line-separator{
+	height:1px;
+	background: lightgrey;
+	border-bottom:1px solid lightgrey;
+}

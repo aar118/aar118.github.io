@@ -1,0 +1,18 @@
+{
+  "ownerID": "146008440861491200",
+  "token": "MTgzNTU0OTMwMDcyNjE2OTYw.DGJShw.pw6A5ePJphaEbuOlFOLARG6LRHo",
+  "defaultSettings": {
+    "youtubeAPIKey": "AIzaSyDV6k2JpfrQBqWHw5q-6NGJaRm47PieqH4",
+    "modLogChannel": "mod-log",
+    "modRole": "Sevens",
+    "adminRole": "Admin",
+    "muteRole": "FuckBoi",
+    "prefix": "!",
+    "welcomeMessage": "Say hello to {{user}}, everyone! We all need a warm welcome sometimes :D",
+    "welcomeEnabled": "true",
+    "joinableRoles": [
+      "Overwatch",
+      "do not purge"
+    ]
+  }
+}

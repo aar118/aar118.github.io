@@ -1,0 +1,1 @@
+I just started learning javascript + html/css not too long ago and I'm now testing JQuery. This is an inferno calculator for Idle Online Univers - a game.
