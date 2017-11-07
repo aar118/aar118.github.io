@@ -1,6 +1,5 @@
 .vs
 _site
-_site
 .sass-cache
 node_modules
 .DS_STORE

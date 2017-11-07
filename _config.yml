@@ -6,7 +6,7 @@ url: "localhost:3000" # the base hostname & protocol for your site e.g. http://w
 
 # User settings
 username: Aaron Hammer
-user_description: I love potatoes
+user_description: Programming is amazing. I love doing multiple kinds of programming, from software to client-side to server-side. It's especially great when my programming is used to help otber people.
 user_title: Full Stack Developer
 email: aaronmathewhammer@gmail.com
 github_username: aar118
