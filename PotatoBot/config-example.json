@@ -1,0 +1,17 @@
+{
+  "ownerID": "",
+  "token": "",
+  "defaultSettings": {
+    "youtubeAPIKey": "",
+    "modLogChannel": "mod-log",
+    "modRole": "Mod",
+    "adminRole": "Admin",
+    "muteRole": "Muted",
+    "prefix": "!",
+    "welcomeMessage": "Say hello to {{user}}, everyone! We all need a warm welcome sometimes :D",
+    "welcomeEnabled": "true",
+    "joinableRoles": [
+      "Member"
+    ]
+  }
+}
