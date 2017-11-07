@@ -1,22 +1,13 @@
-<html>
-<head>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
-    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-</head>
-<body>
-    <div id="app">
-        <v-app>
-            <main>
-                <v-container dark>My name is Steve.</v-container>
-            </main>
-        </v-app>
-    </div>
+--- 
+layout: default 
+---
 
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
-    <script>
-        new Vue({ el: '#app' })
-    </script>
-</body>
-</html>
+<div id="projects">
+  <p>Projects</p>
+  {% for project in site.data.projects %}
+  <div class="project">
+      <div class="projectContent"><a href="{{ projects.url }}">{{ project.title }}</a></div>
+      <p>{{ project.description }}</p>
+  </div>
+  {% endfor %}
+</div>

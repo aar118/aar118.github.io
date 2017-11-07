@@ -1,0 +1,23 @@
+-title: The Cosmic Potato
+url: https://github.com/aar118/aar118.github.io/potatogame
+description: I wanted to learn how to make a simple game in JavaScript using Angular Material, so I did!
+
+-title: PotatoBot
+url: https://github.com/aar118/aar118.github.io/PotatoBot
+description: I administrate a Discord server for a bunch of friends in Computer Science and Engineering. They wanted a Discord Bot to keep 'em company. It's made in Node.js.
+
+-title: Canvas Test
+url: https://github.com/aar118/aar118.github.io/canvastest
+description: HTML5 has a lot of powerful features. This project uses just pure JavaScript and HTML5 canvas to bounce a box around.
+
+-title: Lexi Test
+url: https://github.com/aar118/aar118.github.io/lexitest
+description: This was a little gift to my good friend, Lexi. See how much similar you relate to her interests! This uses PHP.
+
+-title: IOU Inferno Calculator
+url: https://github.com/aar118/aar118.github.io/InfernoCalc
+description: A calculator I made for a game when Google Sheets were getting too slow to hold a hundred people doing things in it. There is also a version without SQL, but I never actually set up a remote database. This uses Bootstrap with JQuery.
+
+-title: Tree Node Project
+url: https://github.com/aar118/aar118.github.io/treenodeproject
+description: I didn't really like the layout of my university's class list, so I decided to make it easier to figure out what classes we need in the department. It uses the D3 library.
