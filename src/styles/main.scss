@@ -12,9 +12,6 @@ body {
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
   color: #afafbf;
-  -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
 }
 
 @-webkit-keyframes pulse {
@@ -158,6 +155,9 @@ body {
   text-align: center;
   font-size: 30px;
   cursor: pointer;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
   .icon {
     position: absolute;
     -webkit-transform-style: preserve-3d;
