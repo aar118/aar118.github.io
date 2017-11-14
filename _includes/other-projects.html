@@ -5,7 +5,7 @@
     <ul>
         {% for project in site.data.potatoes %}
           <li>
-            <a href="{{ project.url }}">{{ project.title }}</a>
+            <a class="other-projects-link" href="{{ project.url }}">{{ project.title }}</a>
             <p>{{ project.description }}</p>
           </li>
         {% endfor %}

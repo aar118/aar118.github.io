@@ -1,61 +1,65 @@
-$main: #1a222c;
+$background: #131417;
+$base: #59359b;
 $sec: #4B5664;
 $purple: #54516A;
 $cut: 768px;
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-
+html,
 body {
+  background: $background;
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
+  color: #afafbf
 }
 
 @-webkit-keyframes pulse {
-    from {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-        filter: alpha(opacity=40);
-        opacity: .4;
-        top: 0;
-    }
-    50% {
-        -ms-filter: none;
-        -webkit-filter: none;
-        filter: none;
-        opacity: 1;
-        top: -10px;
-    }
-    to {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-        filter: alpha(opacity=40);
-        opacity: .4;
-        top: 0;
-    }
+  from {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: .4;
+    top: 0;
+  }
+  50% {
+    -ms-filter: none;
+    -webkit-filter: none;
+    filter: none;
+    opacity: 1;
+    top: -10px;
+  }
+  to {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: .4;
+    top: 0;
+  }
 }
 
 @keyframes pulse {
-    from {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-        filter: alpha(opacity=40);
-        opacity: .4;
-        top: 0
-    }
-    50% {
-        -ms-filter: none;
-        -webkit-filter: none;
-        filter: none;
-        opacity: 1;
-        top: -10px
-    }
-    to {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-        filter: alpha(opacity=40);
-        opacity: .4;
-        top: 0
-    }
+  from {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: .4;
+    top: 0
+  }
+  50% {
+    -ms-filter: none;
+    -webkit-filter: none;
+    filter: none;
+    opacity: 1;
+    top: -10px
+  }
+  to {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: .4;
+    top: 0
+  }
 }
 
 #particles-js {
-  background: $main;
+  background: $background;
   display: block;
   vertical-align: bottom;
   width: 100vw;
@@ -64,15 +68,15 @@ body {
   background-size: cover;
   background-attachment: fixed;
   .particles-js-canvas-el {
-    width:100vw !important;
-    height:100vh !important;
+    width: 100vw !important;
+    height: 100vh !important;
   }
 }
 
 .content {
   z-index: 1;
   text-align: center;
-  color:#FFF;
+  color: #FFF;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -83,7 +87,7 @@ body {
     font-size: 50px;
     display: block;
     line-height: 1;
-    @media only screen and (min-width:$cut){
+    @media only screen and (min-width: $cut) {
       margin: 0;
       font-size: 100px;
     }
@@ -93,7 +97,7 @@ body {
     display: block;
     line-height: 1;
     margin: 5px 0 10px 0;
-    @media only screen and (min-width:$cut){
+    @media only screen and (min-width: $cut) {
       font-size: 40px;
     }
   }
@@ -104,7 +108,7 @@ body {
     text-decoration: none;
     font-size: 15px;
     margin: 10px;
-    @media only screen and (min-width:$cut){
+    @media only screen and (min-width: $cut) {
       font-size: 20px;
     }
   }
@@ -126,11 +130,11 @@ body {
     border: 2px solid #FFF;
     transition: all .7s;
     &:hover {
-      color: $main;
+      color: $base;
       background: #FFF;
     }
     &:active {
-      color: $main;
+      color: $base;
       background: #FFF;
     }
     @media only screen and (min-width:$cut) {
@@ -152,24 +156,24 @@ body {
   font-size: 30px;
   cursor: pointer;
   .icon {
-      position: absolute;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      width: 100px;
-      height: 100px;
-      fill: #fff;
-      -webkit-animation: pulse 1.3s infinite;
-      animation: pulse 1.3s infinite;
-      &:hover {
-        color: $sec;
-      }
-      &:active {
-        color: $sec;
-      }
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    fill: #fff;
+    -webkit-animation: pulse 1.3s infinite;
+    animation: pulse 1.3s infinite;
+    &:hover {
+      color: $sec;
+    }
+    &:active {
+      color: $sec;
+    }
   }
 }
 
@@ -177,6 +181,9 @@ body {
   text-align: center;
   margin: 20px auto;
   font-size: 60px;
+  h4 {
+    color: #FFF;
+  }
   p {
     font-size: 16px;
   }
@@ -189,6 +196,7 @@ body {
   text-align: center;
   font-size: 16px;
   margin: 10px auto;
+  color: #FFF;
 }
 
 .user-projects {
@@ -200,9 +208,10 @@ body {
   }
   h5 {
     margin: 0;
+    color: #FFF;
   }
   li {
-    color: $main;
+    color: $base;
     font-size: 1.1rem;
   }
   p {
@@ -232,37 +241,45 @@ body {
   width: 100px;
   margin: 10px 0px;
   padding: 5px;
-  color: $main;
+  color: $base;
   background-color: transparent;
-  border: 1px solid $main;
+  border: 1px solid $base;
   border-radius: 10px;
   text-align: center;
   outline: none;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.3s ease-out,
-              background-color 0.3s ease-out,
-              border-color 0.3s ease-out;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out;
   &:hover {
     background-color: $purple;
     border-color: $purple;
     color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in, border-color 0.3s ease-in;
   }
   &:active {
-    background-color: $purple;
     border-color: $purple;
     color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in, border-color 0.3s ease-in;
+  }
+}
+
+.other-projects-link {
+  color: $base;
+  transition: color 0.3s ease-out, border-color 0.3s ease-out;
+  &:hover {
+    border-color: $purple;
+    color: #fff;
+    transition: color 0.3s ease-in, border-color 0.3s ease-in;
+  }
+  &:active {
+    border-color: $purple;
+    color: #fff;
+    transition: color 0.3s ease-in, border-color 0.3s ease-in;
   }
 }
 
 .footer {
-  background: $main;
+  background: $background;
   padding: 10px 0;
   margin-top: 100px;
   text-align: center;
@@ -274,7 +291,7 @@ body {
     text-decoration: none;
     margin: 0;
     color: #FFF;
-    &:hover{
+    &:hover {
       color: $sec;
     }
     &:active {
