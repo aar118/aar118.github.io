@@ -1,6 +1,9 @@
 # Site settings
 title: Aaron Hammer
-description: It's Hammer Time
+description: The most awesome website for Aaron Hammer and his projects.
+keywords: "Full, Stack, Developer, Aaron, Hammer, Aaron Hammer, Coding, Awesome"
+author: "Aaron Hammer"
+
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 url: "http://aaronha.com" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
