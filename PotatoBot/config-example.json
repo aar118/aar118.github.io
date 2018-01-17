@@ -3,13 +3,15 @@
   "token": "",
   "defaultSettings": {
     "youtubeAPIKey": "",
+    "defaultVolume": 5,
+    "maxSongs": 10,
+    "maxSongLength": 120,
+    "paginatedItems": 5,
     "modLogChannel": "mod-log",
     "modRole": "Mod",
     "adminRole": "Admin",
     "muteRole": "Muted",
     "prefix": "!",
-    "welcomeMessage": "Say hello to {{user}}, everyone! We all need a warm welcome sometimes :D",
-    "welcomeEnabled": "true",
     "joinableRoles": [
       "Member"
     ]
