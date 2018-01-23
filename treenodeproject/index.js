@@ -138,7 +138,8 @@ function node_scale(uses) {
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink()
         .id(function (d) { return d.name; })
-        .distance(function (d) { return d.type == "prerequisite" ? 1000 : 500 }))
+        .distance(function (d) { return d.type == "prerequisite" ? 1000 : 500 })
+        .strength(1))
     .force("center", d3.forceCenter(full_width / 2, full_height / 2))
     .force("collision", d3.forceCollide().radius(25));
 
