@@ -69,7 +69,7 @@ P {
     width: 50vw;
 }
 
-#col-1 a, col-2 a {
+#col-1 a, #col-2 a, .h2 a {
     color: #fff;
 }
 
