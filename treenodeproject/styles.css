@@ -69,6 +69,10 @@ P {
     width: 50vw;
 }
 
+#col-1 a, col-2 a {
+    color: #fff;
+}
+
 #col-1 {
     position: absolute;
     left: 0;
