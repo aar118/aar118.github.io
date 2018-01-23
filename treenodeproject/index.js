@@ -9,6 +9,8 @@ $(document).ready(function () {
 
 // ------ Global variables -----------
 // set SVG width, height to window size
+
+var selected_node = null;
 var w = window,
     d = document,
     e = d.documentElement,
@@ -76,6 +78,9 @@ function center_node(d, zoomon) {
     // Open panel
     d3.select("#statzone").attr("class", "show");
 
+    // change background of active node and disable background of all other nodes
+    //g.selectAll("circle").attr("class", "");
+
     // Moves clicked node to center ; if zoomon true, will also zoom to on node to make it readable
 
     if (zoomon) {
@@ -95,7 +100,6 @@ function center_node(d, zoomon) {
     // update zoom object to reflect the transform, and prevent "jumping" effect when click followed by panning
     d3.select(viz).transition().duration(2000)
         .call(zoom.transform, d3.zoomIdentity.translate(dcx, dcy).scale(scale));
-
     display_course_info(d)
 }
 
@@ -143,9 +147,7 @@ var simulation = d3.forceSimulation()
     .force("center", d3.forceCenter(full_width / 2, full_height / 2))
     .force("collision", d3.forceCollide().radius(25));
 
-build_graph();
 
-function build_graph() {
     d3.json("graph_links.json", function (error, graph_links) {
         if (error) throw error;
 
@@ -224,6 +226,7 @@ function build_graph() {
                 })
                 .on("click", function (d) {
                     console.log("node clicked!", count);
+                    selected_node = d;
                     center_node(d, false);
                     count += 1;
                 });
@@ -268,6 +271,8 @@ function build_graph() {
                         return "translate(" + d.x + "," + d.y + ")";
                     }); // for the text
 
+                circle
+                    .classed("circle-active", function (d) { return d === selected_node; });
                 counter += 1;
 
                 if (counter < 31) {
@@ -300,7 +305,7 @@ function build_graph() {
 
         });
     });
-}
+
 // --------- More functions --------
 
 function dragstarted(d) {
@@ -337,6 +342,8 @@ function searchNode(course) {
                 return d.name == selectedVal;
             }
         });
+        selected_node = selected.datum();
+        simulation.restart();
         center_node(selected.datum(), true);
     }
 }

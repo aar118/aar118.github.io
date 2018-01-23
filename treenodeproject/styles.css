@@ -446,6 +446,10 @@ circle {
 circle:hover {
     transform: scale(1.2, 1.2);
 }
+
+.circle-active {
+    fill: pink;
+}
 text {
     font: 10px sans-serif;
     pointer-events: none;
