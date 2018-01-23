@@ -1,0 +1,281 @@
+{
+  "Computer Science": [
+    {
+      "source": "Computer Science I",
+      "target": "Computer Science II",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Computer Science I",
+      "target": "Computer Science I Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "Computer Science II",
+      "target": "Computer Science II Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "Computer Science I",
+      "target": "OS Concepts and Usage",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Computer Science II",
+      "target": "Computer Organization",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Computer Organization",
+      "target": "Data Structures and Algorithms",
+      "type": "prerequisite"
+    },
+    {
+      "source": "OS Concepts and Usage",
+      "target": "Data Structures and Algorithms",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Discrete Structures and Their Algorithms",
+      "target": "Data Structures and Algorithms",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Discrete Structures and Their Algorithms",
+      "target": "Discrete Structures and Their Algorithms Recitation",
+      "type": "corequisite"
+    },
+    {
+      "source": "Computer Organization",
+      "target": "Computer Organization Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "OS Concepts and Usage",
+      "target": "OS Concepts and Usage Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "Data Structures and Algorithms",
+      "target": "Comparative Languages",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Data Structures and Algorithms",
+      "target": "Introduction to Software Engineering",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Data Structures and Algorithms",
+      "target": "OS Internals and Design",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Discrete Structures and Their Algorithms",
+      "target": "Logic for Computer Scientists",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Academic Writing and Reading",
+      "target": "Technical Communications for Engineers and Computer Scientists",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Calculus II",
+      "target": "Applied Statistics I",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Calculus I",
+      "target": "Elementary Linear Algebra",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Calculus I",
+      "target": "Calculus II",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Data Structures and Algorithms",
+      "target": "Team Projects I",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Team Projects I",
+      "target": "Team Projects II",
+      "type": "prerequisite"
+    }
+  ],
+  "Computer Engineering": [
+    {
+      "source": "Computer Science I",
+      "target": "Computer Science II",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Computer Science I",
+      "target": "Computer Science I Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "Computer Science II",
+      "target": "Computer Science II Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "Computer Science I",
+      "target": "OS Concepts and Usage",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Computer Science II",
+      "target": "Computer Organization",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Computer Organization",
+      "target": "Data Structures and Algorithms",
+      "type": "prerequisite"
+    },
+    {
+      "source": "OS Concepts and Usage",
+      "target": "Data Structures and Algorithms",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Discrete Structures and Their Algorithms",
+      "target": "Data Structures and Algorithms",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Discrete Structures and Their Algorithms",
+      "target": "Discrete Structures and Their Algorithms Recitation",
+      "type": "corequisite"
+    },
+    {
+      "source": "Computer Organization",
+      "target": "Computer Organization Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "OS Concepts and Usage",
+      "target": "OS Concepts and Usage Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "Data Structures and Algorithms",
+      "target": "OS Internals and Design",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Academic Writing and Reading",
+      "target": "Technical Communications for Engineers and Computer Scientists",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Calculus II",
+      "target": "Applied Statistics I",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Calculus II",
+      "target": "Differential Equations with Matrix Algebra",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Calculus I",
+      "target": "Calculus II",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Data Structures and Algorithms",
+      "target": "Team Projects I",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Team Projects I",
+      "target": "Team Projects II",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Computer Science I",
+      "target": "Digital System Design",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Digital System Design",
+      "target": "Microprocessor-Based Embedded Systems",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Microprocessor-Based Embedded Systems",
+      "target": "Microprocessor-Based Embedded Systems Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "Calculus I",
+      "target": "General Physics I",
+      "type": "prerequisite"
+    },
+    {
+      "source": "General Physics I",
+      "target": "General Physics I Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "Calculus II",
+      "target": "General Physics II",
+      "type": "prerequisite"
+    },
+    {
+      "source": "General Physics II",
+      "target": "General Physics II Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "General Physics I",
+      "target": "General Physics II",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Calculus II",
+      "target": "Circuit Analysis I",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Academic Writing and Reading",
+      "target": "Circuit Analysis I",
+      "type": "prerequisite"
+    },
+    {
+      "source": "General Physics II",
+      "target": "Circuit Analysis I",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Circuit Analysis I",
+      "target": "Circuit Analysis I Lab",
+      "type": "corequisite"
+    },
+    {
+      "source": "Circuit Analysis I",
+      "target": "Linear Systems I",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Computer Science I",
+      "target": "Linear Systems I",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Circuit Analysis I",
+      "target": "Electronic Devices and Circuits",
+      "type": "prerequisite"
+    },
+    {
+      "source": "Electronic Devices and Circuits",
+      "target": "Electronic Devices and Circuits Lab",
+      "type": "corequisite"
+    }
+  ]
+}

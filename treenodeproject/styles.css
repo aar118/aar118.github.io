@@ -1,0 +1,430 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+:root {
+    --main-bg-color: #7E231D;
+    --main-hl-color: #AF3C30;
+    --main-link-color: #808080;
+}
+
+.hide {
+    display: none;
+}
+
+#viz rect, line {
+    cursor: default;
+}
+
+    #viz rect:active {
+        cursor: move;
+    }
+
+#body {
+    position: relative;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+#backdrop-div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.85);
+    color: #fff;
+    font-family: "Slabo 27px";
+}
+
+.h1, .h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.h1 {
+    margin-top: 50px;
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.h2 {
+    font-family: "Slabo 27px";
+    font-size: 25px;
+    font-weight: 400;
+}
+
+P {
+}
+
+#col-1, #col-2 {
+    padding: 80px;
+    width: 50vw;
+}
+
+#col-1 {
+    position: absolute;
+    left: 0;
+    text-align: right;
+    padding-right: 60px;
+}
+
+#col-2 {
+    position: absolute;
+    left: 50vw;
+    text-align: left;
+    padding-left: 60px;
+}
+
+#col-1 span {
+    position: absolute;
+    right: 120px;
+}
+
+#col-2 span {
+    position: absolute;
+    left: 120px;
+}
+
+.icon {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}
+
+    .icon.filter {
+        padding: 1px 2px;
+    }
+
+    .icon.slide {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+#footer {
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 15px;
+}
+
+    #footer a {
+        color: #fff;
+    }
+
+.overlaid-div {
+    position: relative;
+}
+
+#graph-stats {
+    position: absolute;
+    right: 230px;
+    top: calc(100vh - 25px);
+    text-shadow: 0 0 10px #fff,0 0 20px #fff,0 0 30px #fff,0 0 40px #fff,0 0 70px #fff,0 0 80px #fff;
+}
+
+#search {
+    padding: 0 0 0 0;
+    padding: 1px 1px 2px 5px;
+    background-color: #cccccc;
+}
+
+#searchBtn:hover {
+    cursor: pointer;
+}
+
+#searchbar {
+    position: absolute;
+    display: block;
+    top: 30px;
+    left: 30px;
+}
+
+#statzone {
+    background-color: rgba(0,0,0,0.85);
+    width: 287px;
+    min-height: 170px;
+    max-height: calc(100vh - 120px);
+    position: absolute;
+    top: calc(5px + 27px + 50px);
+    left: 30px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.overlaid-div {
+    font-family: 'Slabo 27px',serif;
+}
+
+#navsearch {
+    width: 100%;
+    height: 37px;
+}
+
+#navtitle {
+    width: 100%;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.accordion {
+    transition: 0.4s;
+}
+
+.panel {
+    font-family: 'Lato',sans-serif;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    font-size: 11px;
+    font-weight: 300;
+    color: white;
+    display: none;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+div.panel.show {
+    display: block;
+}
+
+#statzone a {
+    text-decoration: none;
+    color: #cccccc;
+    display: inherit;
+    transition: 0.3s;
+}
+
+#navtitle a {
+    font-size: 20px;
+    text-align: center;
+    text-anchor: middle;
+    color: #fff;
+}
+
+a#fiulink {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#close2 {
+    color: #cccccc;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    box-sizing: content-box;
+    height: 10px;
+    width: 10px;
+    float: right;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+}
+
+#close {
+    line-height: 20px;
+    font-size: 13px;
+}
+
+#info {
+    font-size: 20px;
+    padding-bottom: 3px;
+}
+
+#info, #close {
+    background-color: #303030;
+    position: absolute;
+    top: calc(100vh - 50px);
+    width: 30px;
+    right: 20px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+    font-family: "Slabo 27px";
+    font-weight: 500;
+    border: solid 2px #cccccc;
+}
+
+    #statzone a:hover, .offcanvas a:focus, #info:hover, #close:hover, #close2:hover {
+        color: var(--main-link-color);
+        cursor: pointer;
+    }
+
+.bardiv {
+    max-height: calc(100vh - 400px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#navchart {
+    padding-top: 15px;
+    width: 100%;
+}
+
+#barchart rect {
+    fill: #707070;
+    fill: #9d6015;
+    fill: #7F6339;
+    fill: #5C1F9B;
+    fill: var(--main-bg-color);
+}
+
+#barchart, #baraxis text {
+    fill: white;
+}
+
+.axis.bottom line {
+    stroke: white;
+    stroke-width: 0.5px;
+    stroke-dasharray: 4,4;
+}
+
+.axis.bottom path {
+    display: none;
+}
+
+.axis.top line, .axis.top path {
+    stroke: #cccccc;
+    stroke-width: 2px;
+}
+
+polyline {
+    opacity: 1;
+    stroke: white;
+    stroke-width: 1px;
+    fill: none;
+}
+
+.labels text {
+    fill: black;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 0;
+    position: relative;
+}
+
+line.inactive {
+    stroke: #707070;
+    transition: all 1s ease;
+}
+
+line.active {
+    stroke: var(--main-bg-color);
+}
+#gui {
+    position: absolute;
+    display: block;
+    top: 30px;
+    right: 30px;
+}
+
+fieldset {
+    background: #cccccc;
+}
+
+.legend {
+    text-align: center;
+    text-anchor: middle;
+}
+
+#searchbar, #gui {
+    display: none;
+}
+
+
+
+
+.dg .cr.number {
+    border-left: 3px solid var(--main-bg-color);
+}
+
+.dg .property-name {
+    color: #cccccc;
+}
+
+.dg .c .slider-fg {
+    background: var(--main-bg-color);
+}
+
+.dg .c .slider:hover .slider-fg {
+    background: var(--main-link-color);
+}
+
+.dg .cr.number input[type=text] {
+    color: #cccccc;
+}
+
+
+.links {
+    fill: none;
+    stroke: #666;
+    stroke-width: 1.5px;
+}
+
+#prerequisite {
+    fill: #666;
+}
+
+#corequisite {
+    fill: #666;
+}
+
+.link.prerequisite {
+    stroke: #666;
+}
+
+.links.corequisite {
+    stroke: #666;
+    stroke-dasharray: 0,2 1;
+}
+
+
+circle {
+    fill: #ccc;
+    stroke: #333;
+    stroke-width: 1.5px;
+    transition: all 0.3s ease 0s;
+}
+
+circle:hover {
+    transform: scale(1.2, 1.2);
+}
+text {
+    font: 10px sans-serif;
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+label {
+    color: var(--main-hl-color);
+    display: inline;
+}
+
+a.disabled {
+    pointer-events: none;
+}

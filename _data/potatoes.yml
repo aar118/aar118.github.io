@@ -17,3 +17,7 @@
 - title: Tree Node Project
   url: https://github.com/aar118/aar118.github.io/tree/master/treenodeproject
   description: I didn't really like the layout of my university's class list, so I decided to make it easier to figure out what classes we need in the department. It uses the D3 library.
+
+- title: Tree Node Project v2
+  url: https://github.com/aar118/aar118.github.io/tree/master/treenodeprojectv2
+  description: The first tree node project was lacking a few things that I wanted to do, and d3.js had a need version, so this is the more awesome version of the project! It uses JQuery and the D3 library.

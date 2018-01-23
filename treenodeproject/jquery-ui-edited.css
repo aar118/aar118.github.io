@@ -1,0 +1,83 @@
+input, button:focus {
+    outline: none;
+}
+
+.ui-front {
+    z-index: 100;
+}
+
+.ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+    overflow: auto;
+    max-height: calc(100% - 1.1em - 17px);
+    margin: 0 0 0 0;
+}
+
+.ui-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    outline: none;
+}
+
+.ui-menu {
+    position: absolute;
+    margin: 0;
+}
+
+    .ui-menu .ui-menu-item {
+        position: relative;
+        padding: 3px 1em 3px .4em;
+        cursor: pointer;
+        min-height: 0;
+        border-width: 1px 2px 1px 2px;
+    }
+
+.ui-widget {
+    position: absolute;
+    background-color: #cccccc;
+}
+
+    .ui-widget input, .ui-widget button {
+        font-family: 'Slabo 27px',serif;
+        font-size: 1.1em;
+    }
+
+    .ui-widget input {
+        width: 220px;
+        margin-right: 0px;
+        border: none;
+    }
+
+    .ui-widget button {
+        border: 1px;
+        padding: 3px 8px 3px 8px;
+        color: white;
+        background-color: black;
+    }
+
+button:hover {
+    color: var(--main-hl-color);
+}
+
+button:active {
+    color: #cccccc;
+}
+
+.ui-widget-content {
+    font-family: 'Slabo 27px',serif;
+    width: 287px;
+    background: rgba(255,255,255,1);
+    max-height: calc(100vh - 130px);
+    ;
+    overflow-y: auto;
+}
+
+.ui-helper-hidden-accessible {
+    height: 0;
+    display: none;
+}

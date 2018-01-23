@@ -1,236 +1,67 @@
-
-
-<!DOCTYPE html>
-<html>
-<meta charset="utf-8">
-
-<head>
-    <title></title>
-    <style>
-
-        .node circle {
-            fill: lightgreen;
-            transition: all 0.3s ease 0s
-        }
-
-        .node circle:hover {
-            transform: scale(1.2, 1.2);
-        }
-        
-        .node text {
-            transition: all 0.3s ease 0s;
-            font: 15px sans-serif;
-            font-weight: bold;
-            pointer-events: none;
-        }
-        
-        .link {
-            fill: none;
-            stroke: lightgrey;
-        }
-        
-        html,
-        body {
-            overflow:hidden;
-            width: 100%;
-            height: 100%;
-            margin: 0px;
-            padding: 0px;
-        }
-        
-        svg {
-            width: 100%;
-            height: 100%;
-            margin: 0px;
-            padding: 0px;
-        }
-
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-</head>
-
-<body>
-    <div style="background-color: lightblue; text-align: center; font-weight: bold;">Wright State University - Computer Science and Engineering <br> Created by Aaron Hammer <br></div>
-    <script>
-        var width = $(window).width() * 0.9,
-            height = $(window).height() * 0.9;
-
-        var i = 0,
-            duration = 750,
-            root;
-
-        var tree = d3.layout.tree()
-            .nodeSize([40,])
-            .separation(function separation(a, b) {
-                return a.parent == b.parent ? 5 : 5;
-            });
-
-        var diagonal = d3.svg.diagonal()
-            .projection(function (d) { return [d.y, d.x]; });
-
-        var zoom = d3.behavior.zoom().translate([width / 2, height / 2]).scale(1);
-
-        var svg = d3.select("body").append("svg")
-            .attr("width", width)
-            .attr("height", height)
-            .attr("display", "block")
-            .call(zoom.on("zoom", zooming))
-            .append("g")
-            .attr("pointer-events", "all");
-        
-        // Centers the tree or "g"
-        d3.select("svg").select("g")
-            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-        
-        // Zoom function
-        function zooming() {
-            svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-        }
-
-        // Returns a list of all nodes under the root.
-        function flatten(root) {
-            var nodes = [], i = 0;
-
-            function recurse(node) {
-                if (node.children) node.children.forEach(recurse);
-                if (!node.id) node.id = ++i;
-                nodes.push(node);
-            }
-
-            recurse(root);
-            return nodes;
-        }
-
-        // Gets root and updates tree 
-        d3.json("flare.json", function (error, flare) {
-            if (error) throw error;
-
-            root = flare;
-            root.x0 = height / 2;
-            root.y0 = width / 2;
-
-            var nodes = flatten(root);
-            nodes.forEach(function(d) {
-                d._children = d.children;
-                d.children = null;
-            })
-            update(root);
-        });
-
-        function update(source) {
-            // Compute the new tree layout.
-            var nodes = tree.nodes(root).reverse(),
-                links = tree.links(nodes);
-
-            // Normalize for fixed-depth.
-            nodes.forEach(function (d) { d.y = d.depth * 360; });
-
-            // Update the nodes…
-            var node = svg.selectAll("g.node")
-                .data(nodes, function (d) { return d.id || (d.id = ++i); });
-
-            // Enter any new nodes at the parent's previous position.
-            var nodeEnter = node.enter().append("g")
-                .attr("class", "node")
-                .attr("xlink:href", function (d) { return d.link })
-                .attr("transform", function (d) {return "translate(" + source.y0 + "," + source.x0 + ")"; })
-                .on("click", click);
-
-            nodeEnter.append("circle")
-                .attr("r", 5)
-                .style("fill", function (d) {  return d.children !== undefined ? "lightgreen" : (d._children ? "#FFFF94" : "pink"); });
-
-            nodeEnter.append("text")
-                .attr("x", 0)
-                .attr("dy", ".35em")
-                .attr("text-anchor", "middle")
-                .attr("text-align", "center")
-                .attr("font-weight", "bold")
-                .text(function (d) { return d.name; })
-                .style("fill-opacity", 10);
-
-            // Transition nodes to their new position.
-            var nodeUpdate = node.transition()
-                .duration(duration)
-                .attr("transform", function (d) { return "translate(" + d.y + "," + d.x + ")"; });
-
-            nodeUpdate.select("circle")
-                .attr("r", function (d) { return d.children !== undefined ? 75 : (d._children ? 60 : 45); })
-                .style("fill", function (d) { return d.children !== undefined ? "lightgreen" : (d._children ? "#FFFF94" : "pink"); });
-
-
-            
-
-            nodeUpdate.select("text")
-                .attr("text-align", "center")
-                .style("fill-opacity", 1);
-
-
-            // Transition exiting nodes to the parent's new position.
-            var nodeExit = node.exit().transition()
-                .duration(duration)
-                .attr("transform", function (d) { return "translate(" + source.y + "," + source.x + ")"; })
-                .remove();
-
-            nodeExit.select("circle")
-                .attr("r", 5);
-
-            nodeExit.select("text")
-                .style("fill-opacity", 10);
-
-            // Update the links…
-            var link = svg.selectAll("path.link")
-                .data(links, function (d) { return d.target.id; });
-
-            // Enter any new links at the parent's previous position.
-            link.enter().insert("path", "g")
-                .attr("class", "link")
-                .attr("stroke-width", 5)
-                .attr("d", function (d) {
-                    var o = { x: source.x0, y: source.y0 };
-                    return diagonal({ source: o, target: o });
-                });
-
-            // Transition links to their new position.
-            link.transition()
-                .duration(duration)
-                .attr("d", diagonal);
-
-            // Transition exiting nodes to the parent's new position.
-            link.exit().transition()
-                .duration(duration)
-                .attr("d", function (d) {
-                    var o = { x: source.x, y: source.y };
-                    return diagonal({ source: o, target: o });
-                })
-                .remove();
-
-            // Stash the old positions for transition.
-            nodes.forEach(function (d) {
-                d.x0 = d.x;
-                d.y0 = d.y;
-            });
-        }
-
-        // Toggle children on click AND Open url in new window
-        function click(d) {
-            if (d.children) {
-                d._children = d.children;
-                d.children = null;
-            } else {
-                d.children = d._children;
-                d._children = null;
-            }
-            
-            update(d);
-
-            if(d.link) {
-                window.open(d.link, "_blank");
-            }
-        }
-
-    </script>
-</body>
-
+﻿<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="jquery-ui-edited.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body id="body" style="overflow: hidden">
+        <div id="main">
+            <div id="backdrop-div" class='hideshow'>
+                <div class="h1">Wright State University - B.S. for All Majors</div>
+                <div class="h2">a tree graph of all of the courses at Wright State University</div>
+                <div class="h2"><a href="/">All Courses</a></div>
+                <div id="col-1">
+                    <a href="computer_science.html">Computer Science</a>
+                </div>
+                <div id="col-2">
+                    <a href="computer_engineering.html">Computer Engineering</a>
+                </div>
+                <div id="footer">
+                    <a target='_blank' href='https://github.com/aar118/treenodeproject'>More Info On GitHub</a>.<br />
+                </div>
+                <div id="close">✕</div>
+            </div>
+            <div class="overlaid-div">
+                <div id="searchbar" class="ui-widget">
+                    <input id="search" onkeydown="if (event.keyCode == 13)
+                            document.getElementById('searchBtn').click()">
+                    <button id="searchBtn" type="button" onclick="searchNode()">Search</button>
+                </div>
+                <div id="statzone" class="hide">
+                    <div id="close2">✕</div>
+                    <div id="navtitle" class="accordion"></div>
+                    <div id="navcoursetype" class="accordion"></div>
+                    <div id="navcode" class="accordion"></div>
+                    <div id="navlevel" class="accordion"></div>
+                    <div id="navcredithours" class="accordion"></div>
+                    <div id="navscheduletype" class="accordion"></div>
+                    <div id="navdescription" class="accordion"></div>
+                    <div id="naviw" class="accordion"></div>
+                    <div id="navmc" class="accordion"></div>
+                    <div id="navcorequisites" class="accordion"></div>
+                    <div id="navprerequisites" class="accordion"></div>
+                </div>
+                <div id="info" class="hideshow">i</div>
+            </div>
+            <svg id="viz"></svg>
+        </div>
+        <script>
+            // -------- CONFIGURATION CONTROLLERS ----------
+            var config = {
+                "Inertia": .8,
+                //"linkDistance": 250,
+                "Repulsion": 20,
+                "Threshold": 0.5,
+                "Major": ""
+            };
+        </script>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
 </html>

@@ -1,0 +1,15 @@
+{
+  "name": "treenodeproject",
+  "version": "1.0.0",
+  "description": "Tree node project for my college classes in computer science nad computer engineering",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Aaron Hammer",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

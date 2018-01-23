@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="jquery-ui-edited.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body id="body" style="overflow: hidden">
+    <div id="main">
+        <div id="backdrop-div" class='hideshow'>
+            <div class="h1">Wright State University - B.S. in Computer Science</div>
+            <div class="h2">a tree graph of all of the major requirements of the B.S. in Computer Science degree at Wright State University</div>
+            <div class="h2"><a href="/">All Courses</a></div>
+            <div id="col-1">
+                <a href="computer_science.html">Computer Science</a>
+            </div>
+            <div id="col-2">
+                <a href="computer_engineering.html">Computer Engineering</a>
+            </div>
+            <div id="footer">
+                <a target='_blank' href='https://github.com/aar118/treenodeproject'>More Info On GitHub</a>.<br />
+            </div>
+            <div id="close">✕</div>
+        </div>
+        <div class="overlaid-div">
+            <div id="searchbar" class="ui-widget">
+                <input id="search" onkeydown="if (event.keyCode == 13)
+                            document.getElementById('searchBtn').click()">
+                <button id="searchBtn" type="button" onclick="searchNode()">Search</button>
+            </div>
+            <div id="statzone" class="hide">
+                <div id="close2">✕</div>
+                <div id="navtitle" class="accordion"></div>
+                <div id="navcoursetype" class="accordion"></div>
+                <div id="navcode" class="accordion"></div>
+                <div id="navlevel" class="accordion"></div>
+                <div id="navcredithours" class="accordion"></div>
+                <div id="navscheduletype" class="accordion"></div>
+                <div id="navdescription" class="accordion"></div>
+                <div id="naviw" class="accordion"></div>
+                <div id="navmc" class="accordion"></div>
+                <div id="navcorequisites" class="accordion"></div>
+                <div id="navprerequisites" class="accordion"></div>
+            </div>
+            <div id="info" class="hideshow">i</div>
+        </div>
+        <svg id="viz"></svg>
+    </div>
+    <script>
+            // -------- CONFIGURATION CONTROLLERS ----------
+            var config = {
+                "Inertia": .8,
+                //"linkDistance": 250,
+                "Repulsion": 20,
+                "Threshold": 0.5,
+                "Major": "Computer Science"
+            };
+    </script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
