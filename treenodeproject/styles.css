@@ -71,6 +71,7 @@ P {
 
 #col-1 a, #col-2 a, .h2 a {
     color: #fff;
+    font-size: 2.5vw;
 }
 
 #col-1 {
@@ -97,28 +98,13 @@ P {
     left: 120px;
 }
 
-.icon {
-    display: inline-block;
-    height: 24px;
-    width: 24px;
-}
-
-    .icon.filter {
-        padding: 1px 2px;
-    }
-
-    .icon.slide {
-        padding-top: 4px;
-        padding-bottom: 4px;
-    }
-
 #footer {
     position: absolute;
     bottom: 40px;
     text-align: center;
     left: 0;
     right: 0;
-    font-size: 15px;
+    font-size: 2.5vw;
 }
 
     #footer a {
@@ -129,14 +115,8 @@ P {
     position: relative;
 }
 
-#graph-stats {
-    position: absolute;
-    right: 230px;
-    top: calc(100vh - 25px);
-    text-shadow: 0 0 10px #fff,0 0 20px #fff,0 0 30px #fff,0 0 40px #fff,0 0 70px #fff,0 0 80px #fff;
-}
-
 #search {
+    position: relative;
     padding: 0 0 0 0;
     padding: 1px 1px 2px 5px;
     background-color: #cccccc;
@@ -148,7 +128,6 @@ P {
 
 #searchbar {
     position: absolute;
-    display: block;
     top: 30px;
     left: 30px;
 }
@@ -157,13 +136,47 @@ P {
     background-color: rgba(0,0,0,0.85);
     width: 287px;
     min-height: 170px;
-    max-height: calc(100vh - 120px);
+    max-height: calc(90vh);
     position: absolute;
     top: calc(5px + 27px + 50px);
     left: 30px;
     padding-bottom: 5px;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+    #statzone {
+        width: 50vw;
+    }
+
+    #search {
+        width: 40vw;
+    }
+
+    #searchBtn {
+        width: 10vw;
+    }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+    #statzone, #searchbar {
+        left: 10vw;
+    }
+
+    #statzone {
+        width: 80vw;
+    }
+
+    #search {
+        width: 60vw;
+    }
+
+    #searchBtn {
+        width: 20vw;
+    }
 }
 
 .overlaid-div {
