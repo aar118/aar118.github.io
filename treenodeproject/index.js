@@ -101,7 +101,7 @@ function center_node(d, zoomon) {
 
 function display_course_info(d) {
     $("#navtitle").html(`<a href="https://www.wright.edu/degrees-and-programs/catalog/courses/${d.course_type}-${d.code}/" target="_blank">${d.name}</a>`); /* onclick="searchNode()" */
-    $("#navcoursetype").html(`<label>Course Type:<a class="disabled">${d.course_type}</a></label>`);
+    $("#navcoursetype").html(`<label>Course Type: <a class="disabled">${d.course_type}</a></label>`);
     $("#navcode").html(`<label>Code: <a class="disabled">${d.code}</a></label>`);
     $("#navlevel").html(`<label>Level: <a class="disabled">${d.level}</a></label>`);
     $("#navcredithours").html(`<label>Credit Hours: <a class="disabled">${d.credit_hours}</a></label>`);
