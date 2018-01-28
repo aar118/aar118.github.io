@@ -15,7 +15,7 @@
   description: A calculator I made for a game when Google Sheets were getting too slow to hold a hundred people doing things in it. There is also a version without SQL, but I never actually set up a remote database. This uses Bootstrap with JQuery.
 
 - title: Tree Node Project
-  url: https://github.com/aar118/aar118.github.io/tree/master/treenodeproject
+  url: https://github.com/aar118/treenodeproject
   description: I didn't really like the layout of my university's class list, so I decided to make it easier to figure out what classes we need in the department. It uses the D3 library.
 
 - title: Tree Node Project v2
