@@ -283,9 +283,11 @@ var simulation = d3.forceSimulation()
 
             // --------- Autocomplete search bar (needs access to data) --------
             var optArray = [];
+            var optArray2 = [];
 
             for (var i = 0; i < nodes.length - 1; i++) {
                 optArray.push(nodes[i].name);
+                optArray.push(nodes[i].course_type + nodes[i].code);
             }
 
             optArray = optArray.sort();
@@ -339,7 +341,7 @@ function searchNode(course) {
             if (course) {
                 return d.course_type + d.code == course;
             } else {
-                return d.name == selectedVal;
+                return d.name == selectedVal || d.course_type + d.code == selectedVal;
             }
         });
         selected_node = selected.datum();
