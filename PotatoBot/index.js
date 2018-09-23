@@ -42,4 +42,16 @@ client.on('ready', () => {
     client.user.setActivity('Lemme Smash');
 });
 
+client.on('message', msg => {
+    if (msg.channel.id === '414616190502174753') {
+        let user = msg.author;
+        let purgeRole = client.guilds.get(msg.guild.id).roles.find('name', 'DoNotPurge');
+        if (!msg.guild.member(user).roles.has(purgeRole.id)) {
+            msg.guild.member(user).addRole(purgeRole).then(() => {
+                return client.channels.get('414616190502174753').send(`${user.username} added!`).catch(console.error);
+            });
+        }
+    }
+});
+
 client.login(client.config.token);

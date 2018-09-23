@@ -181,7 +181,7 @@ var simulation = d3.forceSimulation()
             }
 
             g.append("defs").selectAll("marker")
-                .data(["prerequisite", "corequisite"])
+                .data(links)
                 .enter().append("marker")
                 .attr("id", function (d) { return d; })
                 .attr("viewBox", "0 -5 10 10")
@@ -347,8 +347,23 @@ function searchNode(course) {
         selected_node = selected.datum();
         simulation.restart();
         center_node(selected.datum(), true);
-    }
+        fadeOtherLinks(selected.datum());
+    }   
 }
+
+function fadeOtherLinks(name) {
+    var active_links = g.selectAll("path").filter(function (d) {
+        console.log(d);
+        return name == d.source.name || name == d.target.name;
+    });
+    //console.log('hello, fading');
+
+    svg.selectAll("path").attr("class", "inactive");
+
+    active_links.attr("class", "active");
+
+}
+
             /*
             function getValues() {
                 var names = [];
